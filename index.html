@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> INTRODUCCIÓN</title>
+<style type="text/css">
+.boton-menu {
+    background-color: #03F;
+    color: white;            
+    padding: 5px 15px;       
+    text-decoration: none;     
+    border-radius: 20px;        
+    display: inline-block;    
+    font-family: Arial, sans-serif;
+    border: 1px solid #3e8e41;
+	margin-bottom:10px;
+}
+
+.boton-menu:hover {
+    background-color: #45a049; 
+}
+</style>
+</head>
+
+<body background="fondo 4.jpg">
+<div class="contador-box">
+    <h3>VISITAS A LA PÁGINA</h3>
+
+    <div id="contador">
+        <p id="numero-visitas">0</p>
+    </div>
+
+    <div class="contador-texto">
+        Gracias por visitar Cd. Alemán
+    </div>
+</div>
+
+<font face="Verdana, Geneva, sans-serif" color="#000033"> 
+<div style="background-color:#66C">
+
+<h1 align="center"> <i> BIENVENIDOS </i> </h1>  
+</div>
+<p align="center">
+<img src="ciudad_aleman.jpeg"width="250" height="250" >
+</p>
+<P align="justify" >En esta pagina conocerán sobre Ciudad Alemán, para ello se dividirá en 3 secciones con la finalidad que pueda conocer su historia, lugares pocos conocidos,negocios de interés, al igual que resolver dudas sobre el lugar. 
+ </P> 
+<P align="justify">Ciudad Alemán es una localidad del municipio de Cosamaloapan, en el estado de Veracruz, hoy destaca por su actividad agropecuaria. </P>
+<p align="justify">Ciudad Alemán tiene un papel fundamental en la historia de la Cuenca de Papaloapan.En 1947, por decreto presindecial se creo la <b>Comisión de Papaloapan (CODELPA), </b>una iniciativa clave que impulso el desarrollo agrícola, social y economíco de la región. Gracias a la labor de <u>CODELPA</u>, se construyeron escuelas,carretas,etc.  </p>
+</font>  
+<p>&nbsp;</p>
+<p><b><h3 align="justify"> Las 3 secciones en la que se dividen:</h3></b>  
+<ol>
+<li><a href="lugares-de-interes.html"class="boton-menu">LUGARES DE INTERES</a></li>
+
+<li><a href="economiaa.html" class="boton-menu">ECONOMÍA DE CIUDAD ALEMÁN</a></li>
+<li><a href="emprendimiento.html" class="boton-menu">EMPRENDIMIENTOS</a></li>
+</ol>
+
+
+
+<script>
+    // 1. Obtener las visitas actuales de localStorage
+    let visitas = localStorage.getItem("contadorAleman");
+
+    // 2. Verificar si es la primera vez que entran
+    if (visitas === null) {
+        visitas = 1;
+    } else {
+        // localStorage guarda todo como texto, lo convertimos a número y sumamos 1
+        visitas = parseInt(visitas) + 1;
+    }
+
+    // 3. Guardar el nuevo total de visitas en el almacenamiento local
+    localStorage.setItem("contadorAleman", visitas);
+
+    // 4. Mostrar el resultado en el HTML reemplazando el "0"
+    document.getElementById("numero-visitas").innerText = visitas;
+</script>
+
+   
+
+
+
+
+</body>
+</html>
